@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baby Orkan - Level 1 Stage 1</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Milkyway&display=swap" rel="stylesheet">
+</head>
+<body style="overflow:hidden;">
+    <button id="toc-btn" title="Table of Contents">
+        <svg width="48" height="44" viewBox="0 0 48 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24 41s-1.45-1.32-3.13-2.77C12.4 31.36 2 23.28 2 14.5 2 8.7 6.7 4 12.5 4c3.54 0 6.54 2.09 8.07 5.09C22.96 6.09 25.96 4 29.5 4 35.3 4 40 8.7 40 14.5c0 8.78-10.4 16.86-18.87 23.73C25.45 39.68 24 41 24 41z" fill="#7ed6f7" stroke="#4bb0e6" stroke-width="2"/>
+        </svg>
+    </button>
+    <div id="toc-modal" style="display:none;">
+        <div id="toc-list">
+            <div class="toc-item" data-part="1">Level 1 - Part 1</div>
+            <div class="toc-item" data-part="2">Level 1 - Part 2</div>
+            <div class="toc-item" data-part="3">Level 1 - Part 3</div>
+            <div class="toc-item" data-part="4">Level 1 - Part 4</div>
+            <div class="toc-item" data-part="5">Level 2 - Part 1</div>
+            <div class="toc-item" data-part="6">Level 2 - Part 2</div>
+            <div class="toc-item" data-part="7">Level 3 - Part 1</div>
+            <div class="toc-item" data-part="8">Level 3 - Part 2</div>
+        </div>
+    </div>
+    <div id="game-container">
+        <div id="game-header">Level 1 - Part 1</div>
+        <img id="background" src="b.png" alt="Background" />
+        <img id="draggable" src="a.png" alt="Draggable Bread" draggable="true" />
+        <div id="success-message">Tebrikler! Bebek Orkan'ı doyurdun!</div>
+        <div id="fireworks"></div>
+        <button id="next-part-btn" style="display:none;">Next Part</button>
+    </div>
+    <div id="part2-container" style="display:none;">
+        <div id="game-header-2">Level 1 - Part 2</div>
+        <img id="part2-c" src="c.png" alt="C Image" />
+        <div id="d-images"></div>
+        <div id="part2-success" style="display:none;">Bravo! Minik orkanı sıçırttın!! :)</div>
+        <div id="fireworks2"></div>
+        <button id="next-part2-btn" style="display:none;">Next Part</button>
+    </div>
+    <div id="part3-container" style="display:none;">
+        <div id="game-header-3">Level 1 - Part 3</div>
+        <img id="part3-e" src="e.png" alt="E Image" />
+        <div id="part3-success" style="display:none;">Yaşasın!!!! Sünnet Orkan'a Karşıyaka turu attırdın! KAF KAF KAF</div>
+        <div id="fireworks3"></div>
+        <button id="next-part3-btn" style="display:none;">Next Part</button>
+    </div>
+    <div id="part4-container" style="display:none;">
+        <div id="game-header-4">Level 1 - Part 4</div>
+        <img id="part4-g" src="g.png" alt="G Image" />
+        <img id="part4-h" src="h.png" alt="H Image" style="display:none;" />
+        <div id="part4-success" style="display:none;">Sana inanamıyorum! Okran'ı kaydıraktan bile kaydırdın! :)) Artık Ergen Orkan'ı tanıma vaktin geldi, hazır mısın?</div>
+        <div id="fireworks4"></div>
+        <button id="next-level-btn" style="display:none;">Next Level</button>
+    </div>
+    <div id="part5-container" style="display:none;">
+        <div id="game-header-5"><span class="burning-text">Level 2 - Part 1</span></div>
+        <img id="part5-i" src="i.jpg" alt="I Background" />
+        <img id="part5-l" src="l.png" alt="L Image" />
+        <div id="mouth-drop"></div>
+        <img id="drag-k" src="k.png" alt="K Draggable" draggable="true" />
+        <div id="part5-success" style="display:none;">Aşırı süper havalı olma vakti geldi! Bi sonraki aşamaya geç!</div>
+        <button id="next-part5-btn" style="display:none;">Next Part</button>
+    </div>
+    <div id="part6-container" style="display:none;">
+        <div id="game-header-6">Level 2 - Part 2</div>
+        <img id="part6-m" src="m.jpg" alt="M Background" />
+        <img id="part6-n" src="n.png" alt="N Image" />
+        <div id="fire-effect" style="display:none;"></div>
+        <button id="next-part6-btn" style="display:none;">Next Part</button>
+        <audio id="blackmetal-audio" src="aaa.mp3"></audio>
+    </div>
+    <div id="part7-container" style="display:none;">
+        <div id="game-header-7">Level 3 - Part 1</div>
+        <img id="part7-o" src="o.png" alt="O Image" />
+        <img id="part7-r" src="r.png" alt="R Image" />
+        <img id="part7-p" src="p.png" alt="P Image" />
+        <div id="rain-effect" style="display:none;"></div>
+        <button id="next-level2-btn" style="display:none;">Next Level</button>
+    </div>
+    <div id="part8-container" style="display:none;">
+        <div id="game-header-8">Level 3 - Part 2</div>
+        <img id="part8-t" src="y.png" alt="Y Background" />
+        <img id="part8-u" src="u.png" alt="U Image" />
+        <div id="part8-success" style="display:none;"></div>
+        <img id="part8-v" src="v.jpg" alt="V Image" style="display:none;" />
+        <button id="next-part8-btn" style="display:none;">Next Part</button>
+    </div>
+    <div id="part9-container" style="display:none;">
+        <div id="game-header-9">Level 3 - Part 3</div>
+        <img id="part9-z" src="z.png" alt="Z Image" draggable="true" />
+        <div id="target-square"></div>
+        <div id="part9-success" style="display:none;">kaptanıma tekne bile park ettirdin. CREW PROUD</div>
+        <img id="part9-aa" src="aa.jpg" alt="AA Image" style="display:none;" />
+        <button id="next-part9-btn" style="display:none;">Next Part</button>
+        <div id="control-buttons">
+            <button id="up-btn">↑</button>
+            <div id="middle-row">
+                <button id="left-btn">←</button>
+                <button id="right-btn">→</button>
+            </div>
+            <button id="down-btn">↓</button>
+        </div>
+    </div>
+    <div id="part10-container" style="display:none;">
+        <div id="game-header-10">Level 3 - Part 4</div>
+        <div id="puzzle-container">
+            <div id="puzzle-slot-1" class="puzzle-slot"></div>
+            <div id="puzzle-slot-2" class="puzzle-slot"></div>
+            <div id="puzzle-slot-3" class="puzzle-slot"></div>
+            <div id="puzzle-slot-4" class="puzzle-slot"></div>
+        </div>
+        <div id="puzzle-pieces">
+            <div id="piece-1" class="puzzle-piece" draggable="true"></div>
+            <div id="piece-2" class="puzzle-piece" draggable="true"></div>
+            <div id="piece-3" class="puzzle-piece" draggable="true"></div>
+            <div id="piece-4" class="puzzle-piece" draggable="true"></div>
+        </div>
+        <div id="part10-success" style="display:none;">Başardın, Orkan'ın bu chapter'ını da tamamladın... :') Kocaman bir adam olarak yeni hayatında neler yapıyor görmek ister misin?</div>
+        <button id="next-part10-btn" style="display:none;">Next Part</button>
+    </div>
+    <div id="part11-container" style="display:none;">
+        <div id="game-header-11">Level 4 - Part 1</div>
+        <div id="part11-text">Orkan'ın sırası:</div>
+        <img id="part11-bg" src="bg.png" alt="Background Image" />
+        <img id="part11-dcc" src="dcc.png" alt="DCC Image" />
+        <img id="part11-haha" src="haha.png" alt="Haha Image" style="display:none;" />
+        <img id="part11-dc" src="dc.png" alt="DC Image" style="display:none;" />
+        <div id="part11-success" style="display:none;">hahahahahahhahahahahhaah</div>
+        <button id="next-part11-btn" style="display:none;">Next Part</button>
+    </div>
+    <div id="part12-container" style="display:none;">
+        <div id="game-header-12">TEBRİKLER!! ORKAN'I 25 YAŞINA GETİRDİN!!!</div>
+        <video id="surf-video" autoplay muted loop>
+            <source src="surf.mp4" type="video/mp4">
+        </video>
+        <div id="left-fireworks"></div>
+        <div id="right-fireworks"></div>
+        <div id="left-confetti"></div>
+        <div id="right-confetti"></div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html> 
